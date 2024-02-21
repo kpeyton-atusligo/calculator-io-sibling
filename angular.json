@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "calculator-io": {
+    "calculator-io-sibling": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/calculator-io",
+            "outputPath": "dist/calculator-io-sibling",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
+
             ],
             "scripts": []
           },
@@ -63,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "calculator-io:build"
+            "browserTarget": "calculator-io-sibling:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "calculator-io:build:production"
+              "browserTarget": "calculator-io-sibling:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "calculator-io:build"
+            "browserTarget": "calculator-io-sibling:build"
           }
         },
         "test": {
@@ -89,7 +91,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
+
             ],
             "scripts": []
           }
@@ -111,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "calculator-io:serve"
+            "devServerTarget": "calculator-io-sibling:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "calculator-io:serve:production"
+              "devServerTarget": "calculator-io-sibling:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "calculator-io"
+  "defaultProject": "calculator-io-sibling"
 }

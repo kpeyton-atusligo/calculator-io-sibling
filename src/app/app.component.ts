@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'calculator-io';
+ 
+  public result:number;
+
+  constructor() { 
+  }
+
+  setResult(theResult:number) {
+    this.result=theResult;
+  }
+
+
 }
